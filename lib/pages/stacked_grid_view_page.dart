@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_practice/widgets/tile_badge.dart';
 
 class StackedGridViewPage extends StatelessWidget {
   const StackedGridViewPage({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class StackedGridViewPage extends StatelessWidget {
           ),
           itemCount: 30,
           itemBuilder: (context, index) {
-            return StackedGridTile();
+            return StackedGridTile(index);
           },
         ),
       ),
@@ -28,13 +29,28 @@ class StackedGridViewPage extends StatelessWidget {
 }
 
 class StackedGridTile extends StatelessWidget {
-  const StackedGridTile({Key? key}) : super(key: key);
+  const StackedGridTile(this.index, {Key? key}) : super(key: key);
+
+  final int index;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 40,
-      color: Colors.grey.shade300,
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        Container(
+          height: 80,
+          color: Colors.grey.shade300,
+          child: Center(
+            child: Text('$index'),
+          ),
+        ),
+        Positioned(
+          right: 0,
+          top: 0,
+          child: TileBadge(index: index),
+        ),
+      ],
     );
   }
 }
