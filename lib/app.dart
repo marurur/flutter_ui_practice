@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_practice/home_page.dart';
 import 'package:flutter_ui_practice/pages/stacked_grid_view_page.dart';
+import 'package:flutter_ui_practice/pages/stacked_list_view.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -12,6 +13,7 @@ class App extends StatelessWidget {
         final Map<String, WidgetBuilder> pushRoutes = {
           HomePage.routeName: (_) => const HomePage(),
           StackedGridViewPage.routeName: (_) => const StackedGridViewPage(),
+          StackedListViewPage.routeName: (_) => const StackedListViewPage(),
         };
         final pushPage = pushRoutes[settings.name]!;
         return MaterialPageRoute(

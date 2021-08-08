@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_practice/pages/stacked_grid_view_page.dart';
+import 'package:flutter_ui_practice/pages/stacked_list_view.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -17,6 +18,13 @@ class HomePage extends StatelessWidget {
             trailing: const Icon(Icons.chevron_right),
             onTap: () => Navigator.of(context).pushNamed(
               StackedGridViewPage.routeName,
+            ),
+          ),
+          ListTile(
+            title: Text(StackedListViewPage.title),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.of(context).pushNamed(
+              StackedListViewPage.routeName,
             ),
           ),
         ],
