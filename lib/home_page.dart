@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_practice/pages/stacked_grid_view_page.dart';
-import 'package:flutter_ui_practice/pages/stacked_list_view.dart';
+import 'package:flutter_ui_practice/pages/stacked_list_view_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);

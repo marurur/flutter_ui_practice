@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_practice/home_page.dart';
 import 'package:flutter_ui_practice/pages/stacked_grid_view_page.dart';
-import 'package:flutter_ui_practice/pages/stacked_list_view.dart';
+import 'package:flutter_ui_practice/pages/stacked_list_view_page.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
