@@ -11,25 +11,25 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(title)),
+      appBar: AppBar(title: const Text(title)),
       body: ListView(
         children: [
           ListTile(
-            title: Text(StackedGridViewPage.title),
+            title: const Text(StackedGridViewPage.title),
             trailing: const Icon(Icons.chevron_right),
             onTap: () => Navigator.of(context).pushNamed(
               StackedGridViewPage.routeName,
             ),
           ),
           ListTile(
-            title: Text(StackedListViewPage.title),
+            title: const Text(StackedListViewPage.title),
             trailing: const Icon(Icons.chevron_right),
             onTap: () => Navigator.of(context).pushNamed(
               StackedListViewPage.routeName,
             ),
           ),
           ListTile(
-            title: Text(AlertDialogPage.title),
+            title: const Text(AlertDialogPage.title),
             trailing: const Icon(Icons.chevron_right),
             onTap: () => Navigator.of(context).pushNamed(
               AlertDialogPage.routeName,

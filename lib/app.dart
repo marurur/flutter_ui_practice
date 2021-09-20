@@ -11,14 +11,17 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       onGenerateRoute: (RouteSettings settings) {
-        final Map<String, WidgetBuilder> pushRoutes = {
-          HomePage.routeName: (_) => const HomePage(),
-          StackedGridViewPage.routeName: (_) => const StackedGridViewPage(),
-          StackedListViewPage.routeName: (_) => const StackedListViewPage(),
-          AlertDialogPage.routeName: (_) => const AlertDialogPage(),
+        final pushRoutes = {
+          HomePage.routeName: (BuildContext context) => const HomePage(),
+          StackedGridViewPage.routeName: (BuildContext context) =>
+              const StackedGridViewPage(),
+          StackedListViewPage.routeName: (BuildContext context) =>
+              const StackedListViewPage(),
+          AlertDialogPage.routeName: (BuildContext context) =>
+              const AlertDialogPage(),
         };
         final pushPage = pushRoutes[settings.name]!;
-        return MaterialPageRoute(
+        return MaterialPageRoute<void>(
           settings: settings,
           builder: pushPage,
         );

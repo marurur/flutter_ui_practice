@@ -8,7 +8,7 @@ class AlertDialogPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Alert Dialog Page')),
+      appBar: AppBar(title: const Text('Alert Dialog Page')),
       body: Stack(
         children: [
           Center(
@@ -23,7 +23,7 @@ class AlertDialogPage extends StatelessWidget {
               padding: const EdgeInsets.all(60),
               child: ElevatedButton(
                 onPressed: () => _showAlertDialog(context),
-                child: Text('Open Alert Dialog'),
+                child: const Text('Open Alert Dialog'),
               ),
             ),
           ),
@@ -33,26 +33,26 @@ class AlertDialogPage extends StatelessWidget {
   }
 
   void _showAlertDialog(BuildContext context) {
-    showDialog(
+    showDialog<void>(
       context: context,
       builder: (context) {
         return AlertDialog(
-          content: Text('Do you want to go to next page?'),
+          content: const Text('Do you want to go to next page?'),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Text('No'),
+              child: const Text('No'),
             ),
             TextButton(
               onPressed: () {
                 Navigator.pop(context);
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => _NextPage()),
+                Navigator.of(context).push<void>(
+                  MaterialPageRoute(builder: (context) => const _NextPage()),
                 );
               },
-              child: Text('Yes'),
+              child: const Text('Yes'),
             ),
           ],
         );
@@ -67,7 +67,7 @@ class _NextPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(('Next Page'))),
+      appBar: AppBar(title: const Text('Next Page')),
     );
   }
 }

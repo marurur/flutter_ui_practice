@@ -13,7 +13,7 @@ class TileBadge extends StatelessWidget {
     return Container(
       width: 50,
       height: 50,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.orange,
         shape: BoxShape.circle,
       ),
