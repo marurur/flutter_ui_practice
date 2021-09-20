@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_practice/pages/alert_dialog_page.dart';
 import 'package:flutter_ui_practice/pages/stacked_grid_view_page.dart';
 import 'package:flutter_ui_practice/pages/stacked_list_view_page.dart';
 
@@ -25,6 +26,13 @@ class HomePage extends StatelessWidget {
             trailing: const Icon(Icons.chevron_right),
             onTap: () => Navigator.of(context).pushNamed(
               StackedListViewPage.routeName,
+            ),
+          ),
+          ListTile(
+            title: Text(AlertDialogPage.title),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.of(context).pushNamed(
+              AlertDialogPage.routeName,
             ),
           ),
         ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_practice/home_page.dart';
+import 'package:flutter_ui_practice/pages/alert_dialog_page.dart';
 import 'package:flutter_ui_practice/pages/stacked_grid_view_page.dart';
 import 'package:flutter_ui_practice/pages/stacked_list_view_page.dart';
 
@@ -14,6 +15,7 @@ class App extends StatelessWidget {
           HomePage.routeName: (_) => const HomePage(),
           StackedGridViewPage.routeName: (_) => const StackedGridViewPage(),
           StackedListViewPage.routeName: (_) => const StackedListViewPage(),
+          AlertDialogPage.routeName: (_) => const AlertDialogPage(),
         };
         final pushPage = pushRoutes[settings.name]!;
         return MaterialPageRoute(
